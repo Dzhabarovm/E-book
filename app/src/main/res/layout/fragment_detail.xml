@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingHorizontal="28dp"
+    android:gravity="center_horizontal"
+    tools:context=".DetailFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:contentInsetStart="0dp">
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00000000"
+            android:src="@drawable/ic_arrow_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/mark_book"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#00000000"
+                android:src="@drawable/ic_bookmark" />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="#00000000"
+                android:src="@drawable/ic_baseline_more_vert_24" />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/book_cover"
+        android:layout_width="216dp"
+        android:layout_height="320dp" />
+
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        style="@style/headerStyle"
+        tools:text="Yves Saint Laurent" />
+
+    <TextView
+        android:id="@+id/book_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Suzy Menkes"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="14sp"
+        android:lineHeight="21dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:numStars="5"
+        tools:rating="4"
+        android:progressTint="#FFC41F"/>
+
+    <TextView
+        android:id="@+id/book_annotation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="14sp"
+        tools:text="A spectacular visual journey through 40 years of haute couture from one of the best-known and most trend-setting brands in fashion."/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/ic_notes"
+            android:drawablePadding="15dp"
+            android:text="Preview"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:drawableStart="@drawable/ic_reviews"
+            android:drawablePadding="15dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="14sp"
+            android:text="Reviews"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/order_button_shape"
+        android:text="Buy Now"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="16sp" />
+
+</LinearLayout>
