@@ -14,6 +14,7 @@ class ViewModel(application: Application) : AndroidViewModel(application) {
     val getAll: LiveData<List<Book>> = dao.getAll()
     val getPopular: LiveData<List<Book>> = dao.getPopular()
     val getNewBooks: LiveData<List<Book>> = dao.getNew()
+    val getFavorites: LiveData<List<Book>> = dao.getFavorites()
 
     fun addBooks(books: List<Book>) {
         viewModelScope.launch(Dispatchers.IO) {

@@ -49,6 +49,11 @@ class DetailFragment : Fragment() {
 
         }
 
+        binding.buyNow.setOnClickListener {
+            val action = DetailFragmentDirections.actionDetailFragmentToBasketFragment(bookId)
+            findNavController().navigate(action)
+        }
+
         binding.backButton.setOnClickListener {
             findNavController().popBackStack()
         }
